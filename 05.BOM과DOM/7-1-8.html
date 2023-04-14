@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first">
+     <!-- 여기에 태그 넣기 -->
+    </div>
+    
+    <script>
+        // 태그 생성하기 createElement('태그명')
+        const header = document.createElement('h1');
+        const div = document.createElement('div');
+
+        console.log(header);
+        console.log(div);
+
+        header.textContent = '문서 객체 생성하기';
+        div.textContent = 'div 생성하기';
+
+        //생성한 태그 body에 넣어주기
+        // body아래에 자식 태그로 넣어준다. 
+        document.body.appendChild(header);
+        document.body.appendChild(div);
+
+
+        // div 안에 넣어주기
+        const header2 = document.createElement('h1'); // h1 태그 생성
+        const first = document.querySelector('#first'); // div를 가져온다.
+        console.log(header2);
+        console.log(first);
+
+        header2.textContent = '안녕하세요';
+        first.appendChild(header2); // div 태그 안에 자식태그로 넣어준다.
+    </script>
+</body>
+</html>

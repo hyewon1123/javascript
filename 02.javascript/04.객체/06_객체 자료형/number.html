@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let str = '1' ;
+        let num = 5.292929;
+        let m = Number('숫자로 변환할 수 없는');
+        const n =10/0 ;
+
+        console.log(Number(str)); // 숫자로 형변환해주는 함수 > Number()
+
+        console.log(num.toFixed(2));  // ()자리까지 소수점 출력하는 함수 > toFixed()
+
+        console.log(Number.isNaN(m)); // ()이 숫자인지 아닌지 판단하는 함수 > isNaN()
+        
+        console.log(n);
+        console.log(Number.isFinite(n)); // ()이 유한한 숫자인지 판단하는 함수 > isFinite()
+    </script>
+</body>
+</html>

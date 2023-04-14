@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const height = Number(prompt('신장을 입력하세요'));
+
+        if( height>= 150) {
+            console.log('놀이기구 이용가능');
+        }
+        else {
+            const a = Boolean(confirm('부모님과 함께 왔나요?'));
+            if( a==true ) {
+                console.log('좋은 시간 보내렴~')
+            }
+            else {
+                console.log('어른 모시고 다시 오렴~')
+            }
+        }
+    </script>
+</body>
+</html>

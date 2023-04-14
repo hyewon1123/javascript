@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function add(a,b) {
+            console.log(`a는 ${a}, b는 ${b}`);
+            return a+b;
+        }
+
+        // ES6 화살표 함수
+        // 리턴값이 하나일때는 중괄호, return 생략 가능
+        // 따라서 아래의 문장을  const addarrow = (a,b) => a+b 로 나타낼 수도 있음
+        const addarrow = (a,b) => {
+            console.log(`a는 ${a}, b는 ${b}`);
+            return a+b;
+        }
+
+        const sum = add (1,2);
+        console.log(`합:${sum}`);
+
+        const sum2 = add (1,2);
+        console.log(`합:${sum2}`);
+    </script>
+</body>
+</html>

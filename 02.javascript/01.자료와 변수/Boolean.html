@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "10"; //문자형
+        var result1; // 중요! undefined 상태: 아무것도 값이 정의가 안된 상태.
+        var result2 = null; //중요! null : 빈 값
+
+        console.log(Boolean(result2));  //강제 형변환
+        console.log(Boolean(0));
+        console.log(Boolean(''));  
+        console.log(Boolean(result1));  
+
+        console.log(Boolean(' 안녕 '));  
+        console.log(Boolean('1'));  
+
+        result = a === f ; //값과 자료형 타입까지 같이 비교
+        document.write(result, '<br>');
+
+        result = a == f ; //단순하게 값만 비교
+        document.write(result);
+
+    </script>
+</body>
+</html>

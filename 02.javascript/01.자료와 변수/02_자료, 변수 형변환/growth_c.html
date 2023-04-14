@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result ;
+
+        num1--;
+        document.write(num1, '<br>');
+
+        num1++;
+        document.write(num1, '<br>');
+
+        result = num2++; // 대입 후 연산하는 후위연산자라 출력값은 20이 출력됨.
+        document.write(result,'<br>');
+        
+        // 후위 연산자에 의해 num2가 21로 증가
+
+        result = ++num2;
+        document.write(result,'<br>');
+    </script>
+</body>
+</html>

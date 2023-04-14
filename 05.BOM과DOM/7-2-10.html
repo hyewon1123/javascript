@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>좋아하는 애완동물 산책</h3>
+    <input type="radio" name="pet" value="강아지"><span>강아지</span>
+    <input type="radio" name="pet" value="고양이"><span>고양이</span>
+    <input type="radio" name="pet" value="햄스터"><span>햄스터</span>
+    <input type="radio" name="pet" value="기타"><span>기타</span>
+    <hr>
+    <h3 id="output"></h3>
+
+    <script>
+        const output = document.querySelector('#output');
+
+        // name이 pet인 태그를 가져온다 (속성선택자 이용)
+        const radios = document.querySelectorAll('[name=pet]');
+        // 중요! querySelectorAll은 값을 배열로 가져온다.
+        console.log(radios);
+
+        // 1. 라디오버튼을 선택했을 때 value 속성의 값을 가져온다.
+        // 모든 라디오 버튼의 이벤트를 연결.
+
+        for(const radio of radios) {
+            console.log(radio);
+            radio.addEventListener('change',function(e){
+                const checked = e.currentTarget.checked;
+                const value = e.currentTarget.value;
+                console.log("checked:" + checked);
+                console.log("value:" + value);
+
+                if(checked) {
+                    //라디오 버튼을 체크했을 때
+                    output.textContent = `좋아하는 동물은 ${value} 입니다.`
+                }
+
+            });
+        }
+    </script>
+</body>
+</html>

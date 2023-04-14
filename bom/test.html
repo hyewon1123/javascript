@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="back">뒤로가기</button>
+    <button onclick="re">새로고침</button>
+
+    <script>
+        function back () {
+            history.go(-1); // 뒤로가기
+            history.go(-2); // 2페이지 뒤로가기
+            history.go(0); // 새로고침
+            history.go(1); // 앞으로 가기
+            history.go(2); // 2페이지 앞으로가기
+
+        }
+
+        function re () {
+            location.reload();
+        }
+    </script>
+
+</body>
+</html>

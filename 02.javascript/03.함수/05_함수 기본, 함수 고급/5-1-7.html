@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        function sample(...items) {  //나머지 매개변수
+            console.log(items);   //니머지 매개변수 사용
+        }
+
+        sample(1,2);
+        sample(1,2,3);
+        sample(1,2,3,4);
+        */
+
+        //나머지 매개변수를 이용해 최솟값 구하기
+
+        function min(...items){
+            // [52, 273, 32, 103, 275, 24, 57]
+            let output = items[0]; 
+
+            for(const item of items) {
+                if(output > item) {
+                    output = item;
+                }
+            }
+            return output;
+        }
+
+        console.log(`최솟값 : ${min(52, 273, 32, 103, 275, 24, 57)}`);
+    </script>
+</body>
+</html>

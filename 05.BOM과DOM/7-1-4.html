@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HEADERS</h1>
+    <h1>HEADERS</h1>
+    <h1>HEADERS</h1>
+    <h1>HEADERS</h1>
+
+    <script>
+        // 여러개의 태그는 배열 형태로 리턴값을 준다.
+        const headers = document.querySelectorAll('h1');
+        console.log(headers);
+
+        // 기본 for, for of, for each
+        for(const header of headers) {
+            console.log(header);
+            header.style.color = 'white';
+            header.style.padding = '10px';
+            header.style.backgroundColor = 'black';
+        }
+
+    </script>
+</body>
+</html>

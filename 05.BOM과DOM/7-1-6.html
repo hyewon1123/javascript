@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="rect" id="cat1" alt ="고양이1">
+    <img class="rect" alt ="고양이2">
+    <img class="rect" alt ="고양이3">
+    <img class="rect" alt ="고양이4">
+    <a class="link">네이버</a>
+
+    <script>
+        const cat1 = document.querySelector('#cat1');
+        console.log(cat1);
+        cat1.setAttribute('src', 'https://placekitten.com/500/280');
+        cat1.setAttribute('alt', '고양이 입니다.');
+        console.log("alt 가져오기:" + cat1.getAttribute('alt'));
+        
+
+        const link = document.querySelector('.link');
+        console.log(link);
+        link.setAttribute('href','http://www.naver.com');
+        
+        
+        /*
+        const rects = document.querySelectorAll ('.rect');
+        console.log(rects);
+
+        for (let i=0; i<rects.length; i++) {
+         const width = (i+1) * 100;  // 100, 200, 300, 400
+         const src = `https://placekitten.com/${width}/280`; 
+         
+         console.log(src);
+         console.log(rects[i]); 
+
+         // html 속성을 만든다. setAttribute('속성명',측정값)
+         rects[i].setAttribute('src',src);
+         // html 속성 값을 가져온다. getAttribute('속성명')
+         console.log(rects[i].getAttribute('alt'));
+         console.log('===========================================================')
+        }
+        */
+    </script>
+</body>
+</html>

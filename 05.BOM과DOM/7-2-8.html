@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위변환기 만들기</title>
+</head>
+<body>
+    <input type = "text"> cm = 
+    <!-- 변환값 출력 -->
+    <span></span> 
+    <select>
+        <option value="10">mm</option>
+        <option value="0.01">m</option>
+        <option value="0.393701">inch</option>
+
+        <script>
+            let inputValue; // 아래 이벤트에 대한 인풋값
+
+            const select=document.querySelector('select');
+            const input = document.querySelector('input');
+            const span = document.querySelector('span');
+            
+            // 1. select 박스에서 change가 일어났을때 값을 가져온다.
+            select.addEventListener('change', function(e){
+                // select 박스에서 선택한 값을 가져오는 방법
+                const options = e.currentTarget.options;
+                const index = options.selectedIndex;  
+                
+                // option태그 사이에 있는 텍스트를 가져온다.
+                console.log(options[index].textContent);  
+
+                // option태그에 있는 value속성의 값을 가져온다.
+                console.log(options[index].value);
+                const numValue = Number(options[index].value);
+
+                // 2. cm를 알맞는 값으로 변환시켜준다.
+                let result = (inputValue * numValue).toFixed(2);
+                console.log("result:" + result);
+
+                span.textContent = result;
+            });
+            
+           // 키보드에 입력한 input값을 가져오기
+           input.addEventListener('keyup',function(e){
+            inputValue = Number(e.currentTarget.value);
+
+            //cm를 알맞는 값으로 변환시켜준다.
+            let result = (inputValue * 10).toFixed(2);
+                console.log("result:" + result);
+
+                span.textContent = result;
+           });
+
+
+
+        </script>
+    </select>
+</body>
+</html>

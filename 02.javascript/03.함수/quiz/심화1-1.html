@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const a = Number(prompt("숫자1을 입력하세요."));
+        const b = Number(prompt("숫자2을 입력하세요."));
+
+        function add (a,b) {
+            result = a+b;
+            return result;
+        }
+
+        function sub (a,b){
+            result = a-b;
+            return result;
+        }
+        function division (a,b){
+            result = a/b;
+            return result;
+        }
+        function multiple (a,b) {
+            result = a*b;
+            return result;
+        }
+
+        console.log(`add > ${add(a,b)}`);
+        console.log(`sub > ${sub(a,b)}`);
+        console.log(`division > ${division(a,b)}`);
+        console.log(`multiple > ${multiple(a,b)}`);
+
+    </script>
+</body>
+</html>

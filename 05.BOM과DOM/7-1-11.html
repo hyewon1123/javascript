@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>클릭횟수: 0</h1>
+    <script>
+         // 이벤트를 적용할 태그를 가지고 온다.
+        const h1 = document.querySelector('h1');
+        let counter = 0; // 클릭횟수 변수 선언
+
+        // 이벤트 함수 적용 addEventListner('이벤트명', 콜백함수);
+        h1.addEventListener('mousemove', function(){
+            //클릭했을 때 실행되는 코드 (이벤트 발생)
+           counter ++;
+           console.log(counter);
+           h1.textContent = `클릭 횟수:  ${counter}`;
+        });
+    </script>
+</body>
+</html>

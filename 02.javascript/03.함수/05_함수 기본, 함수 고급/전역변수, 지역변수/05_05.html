@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var num = 1; // 전역변수 (스코프라인 밖에있음, 자바스크립트 어디서든지 가져다가 사용가능!)
+
+        function love(){
+            var a = num+1 ; // 지역변수 (스코프라인 안에있음, 스코프 안에서만 사용가능)
+            console.log(`a: ${a}`);
+        }
+
+        love();
+    </script>
+</body>
+</html>

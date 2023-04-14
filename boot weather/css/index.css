@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+main > section {
+  margin: 60px 0;
+}
+
+#map {
+  height: 500px !important;
+}

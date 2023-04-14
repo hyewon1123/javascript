@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change event</title>
+</head>
+<body>
+    <select id="rel_site">
+		<option value="">사이트 선택</option>
+		<option value="www.google.com">구글</option>
+		<option value="www.naver.com">네이버</option>
+		<option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+
+    <a href="#" class="link1">테스트1</a>
+
+    <script src="./jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(function(){
+            $(rel_site).change(function(){
+                $(".txt").text($(this)) // 현재 함수 안에서 가르키고있는 선택자
+                    $(".txt").text($(this).val());
+            });
+
+            $(".link1").click(function(e){
+                e.preventDefault(); // a태그의 링크로 넘어가지 않도록 링크이동을 막는다.
+
+                console.log(e); // 이벤트에 대한 정보를 담고있다.
+                alert("클릭입니다.");
+            });
+        });
+    </script>
+</body>
+</html>

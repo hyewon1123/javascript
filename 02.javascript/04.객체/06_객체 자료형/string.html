@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let num = 1;
+        console.log(String(num));
+
+        let str = '           안녕하세요       ';
+        console.log(str.trim());  // 양쪽 끝에 공백을 없애는 함수 > trim()
+
+        let str2 = '배, 사과, 토마토, 포도';
+        let arr = str2.split(','); // 문자열을 특정기호로 자르는 함수 > split()
+        console.log(arr);
+
+        let str3 = '자바스크립트 시간입니다.';
+        console.log(str3.length); // 공백을 포함한 문자수를 반환하는 함수 > length
+        console.log(str3[3]);  // 문자열은 배열처럼 사용할 수 있다.
+
+        console.log("indexOf 자바 :" + str3.indexOf('자바')); // 문자열에서 해당 인덱스를 찾는 함수 > indexOf()
+        console.log("indexOf 시간 :" + str3.indexOf('시간'));
+        console.log("indexOf 혜원" + str.indexOf('혜원'));  // 존재하지 않는 값은 -1로 리턴해준다.
+
+        // indexOf 를 검색에서 활용하기 
+        let search = '이젠' ;
+        if(str3.indexOf(search) == -1) {
+            alert('해당 검색어가 없습니다.');
+        } else {
+            // 검색결과 보여주기
+        }
+        
+    </script>
+</body>
+</html>

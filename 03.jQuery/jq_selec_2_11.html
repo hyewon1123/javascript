@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+		<p><a href="http://easyspub.co.kr" target="_blank">EasysPub</a></p>
+		<p><a href="https://naver.com">Naver</a></p>
+		<p><a href="http://daum.net">Google</a></p>
+		<p><a href="http://google.co.kr">Daum</a></p>
+	</div>
+	<form action="#" method="get" id="member_f">
+		<p>
+			<label for="user_id">아이디</label>
+			<input type="text" name="user_id" id="user_id">
+		</p>
+		<p>
+			<label for="user_pw">비밀번호</label>
+			<input type="password" name="user_pw" id="user_pw">
+		</p>
+	</form>
+
+    <script src="./jquery-3.6.4.min.js"></script>
+
+    <script>
+        $('#wrap a[target]').css({color: "red"});
+        $('#wrap a[href^=https]').css({color: "green"});  // ^=는 ~로 시작하는 의 의미 
+        $('#wrap a[href$=net]').css({color: "violet"});
+
+        //input 타입이 text
+        $('#member_f :text').css({background: "red"});
+
+        //input 타입이 password
+        $('#member_f :password').css({background: "blue"});
+
+
+
+    </script>
+</body>
+</html>

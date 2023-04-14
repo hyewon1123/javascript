@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>이동!</button>
+
+    <script>
+         var sWidth = screen.width;
+         var sHeight = screen.height;
+
+         console.log(sWidth);
+         console.log(sHeight);
+
+         var sWidth2 = screen.availWidth;
+         var sHeight2 = screen.availHeight;
+
+         console.log(sWidth2);
+         console.log(sHeight2);
+
+         // 주소 가져오기
+        var local = location.href;
+        console.log(location);
+
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', function(){
+            //클릭했을 때 네이버로 페이지 이동
+            location.href = "http://www.naver.com";
+        });
+
+        const nav1 = navigator.userAgent;
+        console.log(nav1);
+    </script>
+</body>
+</html>
